@@ -6,8 +6,8 @@ export const axiosSecure = axios.create({
     baseURL: 'http://localhost:5000'
 })
 const useAxiosSecure = () => {
-    const navigate = useNavigate();
     const { logOut } = useAuth();
+    const navigate = useNavigate();
 
     // request interceptor to add authorization header for every secure call to the api
     axiosSecure.interceptors.request.use(function (config) {
