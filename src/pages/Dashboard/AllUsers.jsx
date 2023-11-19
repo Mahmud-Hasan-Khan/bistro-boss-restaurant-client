@@ -1,9 +1,11 @@
 import { useQuery } from "@tanstack/react-query";
-import { axiosSecure } from "../../hooks/useAxiosSecure";
+// import { axiosSecure } from "../../hooks/useAxiosSecure";
 import { FaTrash, FaUsers } from "react-icons/fa";
 import Swal from "sweetalert2";
+import useAxiosSecure from "../../hooks/useAxiosSecure";
 
 const AllUsers = () => {
+    const axiosSecure = useAxiosSecure()
 
     //data Load Using TanStack Query
     const { data: users = [], refetch } = useQuery({

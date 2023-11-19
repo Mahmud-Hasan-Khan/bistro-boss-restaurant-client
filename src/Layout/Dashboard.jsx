@@ -1,10 +1,10 @@
 import { FaShoppingCart, FaHome, FaCalendar, FaList, FaUtensils, FaUser } from "react-icons/fa";
 import { MdMenuBook, MdOutlineRateReview } from "react-icons/md";
 import { NavLink, Outlet } from "react-router-dom";
-import useCart from "../hooks/useCart";
+// import useCart from "../hooks/useCart";
 
 const Dashboard = () => {
-    const [cart] = useCart();
+    // const [cart] = useCart();
 
     // TODO: get isAdmin from the database
     const isAdmin = true;
@@ -46,8 +46,6 @@ const Dashboard = () => {
 
                     <li><NavLink to="/order/salad"><MdMenuBook></MdMenuBook>Menu</NavLink></li>
                 </ul>
-
-
             </div>
 
             {/* dashboard content */}
