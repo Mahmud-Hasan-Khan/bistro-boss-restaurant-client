@@ -7,7 +7,7 @@ import useMenu from "../../hooks/useMenu";
 
 const ManageItems = () => {
 
-    const [menu, loading] = useMenu();
+    const [menu, , refetch] = useMenu();
     const axiosSecure = useAxiosSecure();
 
 
@@ -23,7 +23,7 @@ const ManageItems = () => {
         }).then(async (result) => {
             if (result.isConfirmed) {
                 const res = await axiosSecure.delete(`/menu/${item._id}`);
-                // console.log(res.data);
+                console.log(res.data);
                 if (res.data.deletedCount > 0) {
                     // refetch to update the ui
                     refetch();
@@ -35,8 +35,6 @@ const ManageItems = () => {
                         timer: 1500
                     });
                 }
-
-
             }
         });
     }
@@ -98,7 +96,6 @@ const ManageItems = () => {
                                 </tr>)
                             }
                         </tbody>
-
 
                     </table>
                 </div>
