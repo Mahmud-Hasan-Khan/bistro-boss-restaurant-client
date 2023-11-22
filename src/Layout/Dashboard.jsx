@@ -25,11 +25,11 @@ const Dashboard = () => {
                         </>
                             :
                             <>
-                                <li><NavLink to="/dashboard/cart"><FaHome></FaHome>User Home</NavLink></li>
+                                <li><NavLink to="/dashboard/userHome"><FaHome></FaHome>User Home</NavLink></li>
 
-                                <li><NavLink to="/dashboard/reservation"><FaCalendar></FaCalendar>Reservation</NavLink></li>
+                                <li><NavLink to="/dashboard/paymentHistory"><FaCalendar></FaCalendar>Payment History</NavLink></li>
 
-                                <li><NavLink to="/dashboard/userHome"><FaShoppingCart></FaShoppingCart>My Cart</NavLink></li>
+                                <li><NavLink to="/dashboard/cart"><FaShoppingCart></FaShoppingCart>My Cart</NavLink></li>
 
                                 <li><NavLink to="/dashboard/review"><MdOutlineRateReview></MdOutlineRateReview>Add Review</NavLink></li>
 
