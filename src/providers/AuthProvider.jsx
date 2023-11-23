@@ -52,13 +52,15 @@ const AuthProvider = ({ children }) => {
                     .then(res => {
                         if (res.data.token) {
                             localStorage.setItem('access-token', res.data.token);
+                            setLoading(false);
                         }
                     })
             } else {
                 // remove token when current user is null. (if token stored in the client side : Local storage, caching, in memory)
-                localStorage.removeItem('access-token')
+                localStorage.removeItem('access-token');
+                setLoading(false);
             }
-            setLoading(false);
+
         });
         return () => {
             return unsubscribe();
